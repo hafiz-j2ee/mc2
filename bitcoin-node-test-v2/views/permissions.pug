@@ -1,0 +1,63 @@
+extends layout
+
+block content
+    div.panel-group#accordion
+        div.panel.panel-default
+            div.panel-heading
+                h2.panel-title
+                    a(data-toggle="collapse" data-parent="#accordion" href="#collapse1") Manage Nodes Permissions
+            div#collapse1.panel-collapse.collapse
+                div.panel-body 
+                    form#grant-permissions-form.bct-form
+                        input(type='text' placeholder='Nodes Address' required)#nodes-address.bct-form__input
+                        span#current-permissions
+                        div.form-group
+                            label(for="nodes-permissions") Choose Permission : 
+                            select.form-control#nodes-permissions.bct-form__input.input-lg
+                                option(value="") Select
+                                option(value="create") create
+                                option(value="connect") connect
+                                option(value="send") send
+                                option(value="receive") receive
+                                option(value="issue") issue
+                                option(value="activate") activate
+                                option(value="admin") admin
+
+                        div.form-group
+                            label(for="type") Select Type : 
+                            select.form-control#type.bct-form__input.input-lg
+                                option(value="grant") Grant
+                                option(value="revoke") Revoke
+                        
+                        button(type='submit').bct-form__btn.bct-form__btn_read Submit
+        
+        div.panel.panel-default
+            div.panel-heading
+                h4.panel-title
+                    a(data-toggle="collapse" data-parent="#accordion" href="#collapse2") Stream Write Permission
+            div#collapse2.panel-collapse.collapse
+                div.panel-body 
+                    form#stream-write-permissions-form.bct-form
+                        input(type='text' placeholder='Nodes Address' required)#stream-write-nodes-address.bct-form__input
+                        div.form-group
+                            label(for="nodes-permissions") Choose Stream : 
+                            select.form-control#stream-name-write.bct-form__input.input-lg
+                                
+                        span#current-permissions-write
+                        div.form-group
+                            label(for="type") Select Type : 
+                            select.form-control#stream-write-type.bct-form__input.input-lg
+                                option(value="grant") Grant
+                                option(value="revoke") Revoke
+                        
+                        button(type='submit').bct-form__btn.bct-form__btn_read Submit
+        
+        div.panel.panel-default
+            div.panel-heading
+                h4.panel-title
+                    a(data-toggle="collapse" data-parent="#accordion" href="#collapse3")#show-subscription Subscirbe Stream
+            div#collapse3.panel-collapse.collapse
+                div.panel-body#stream-subscription-table
+                    
+
+    include ./overlay

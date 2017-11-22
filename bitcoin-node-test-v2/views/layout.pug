@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(type='text/javascript' src='/javascripts/index.js')
+  body
+
+  nav.navbar.navbar-inverse
+    div.container-fluid
+      div.navbar-header
+        a(href="/").navbar-brand
+          img(src="/images/logo.jpg", style="display:inline-block;height: inherit;margin-left: -15px;margin-top: -15px;").img-responsive
+
+      ul.nav.navbar-nav
+        li
+          a(href="/") Home
+        li
+          a(href="/create-stream") Create Stream
+        li
+          a(href="/publish-stream") Publish Stream
+        li
+          a(href="/view-stream") View Stream
+        li
+          a(href="/view-nodes") View Nodes
+        li
+          a(href="/permissions") Permissions
+        li
+          a(href="/stream-details") Stream Details
+        li
+          a(href="/Wallet") Wallet
+        li
+          a(href="#")#logout Logout
+
+  block content

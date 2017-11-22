@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    h1.bct-header View Stream
+    form#view-stream-form.bct-form
+        div.form-group
+            label(for="stream-list") Select Stream : 
+                a(href="#")#stream-refresh
+                    span.glyphicon.glyphicon-refresh
+            select.form-control#stream-name.bct-form__input.stream-list.input-lg
+
+        div.form-group
+            label(for="txid") Select Header : 
+                a(href="#")#txid-refresh
+                    span.glyphicon.glyphicon-refresh
+            select.form-control#txid.bct-form__input.txid-list.input-lg
+            
+        //- input(type='text' placeholder='Tx Id' required)#txid.bct-form__input
+        br
+        button(type='submit').bct-form__btn.bct-form__btn_read View Stream
+        br
+        div#text-show-div( style="display: none;")
+            textarea(rows="5" readonly).form-control#stream-data-show.bct-form__input
+            a(href="#")#export.btn.btn-info Export  
+            a(href="#")#edit.btn.btn-info Edit  
+            a(href="#")#republish.btn.btn-info Republish  
+            input(type='text' hidden)#hidden-key
+            input(type='text' hidden)#hidden-publisher
+        a(target="_blank" style="display: none; align:center")#download.btn.btn-info
+
+    include ./overlay

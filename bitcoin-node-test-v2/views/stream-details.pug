@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    script(type='text/javascript' src='/javascripts/custom.js')
+    h1.bct-header Stream Detalils  
+        a
+            span.glyphicon.glyphicon-refresh#refresh
+
+    input(type='text' placeholder='Search' )#search.bct-form__input
+    table.table.table-striped.table-bordered.table-hover.table-condensed#stream-details-table
+        thead
+            tr
+                th Stream Name
+                th Items Count
+                th Keys(c)
+                th Created Date
+                th Create TxId
+                th Subscribe
+        tbody
+    include ./overlay

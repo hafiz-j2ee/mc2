@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(type='text/javascript' src='/javascripts/index.js')
+  body
+    h1.bct-header Login
+    form#login-form.bct-form
+        input(type='text' placeholder='User Name' required)#user-id.bct-form__input
+        input(type='password' placeholder='Passowrd' required)#password.bct-form__input
+        button(type='submit').bct-form__btn.bct-form__btn_read Login
+
+

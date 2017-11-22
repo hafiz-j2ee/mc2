@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1.bct-header Create Stream
+    form#create-stream-form.bct-form
+        //- input(type='text' placeholder='Address' required)#address.bct-form__input
+        div.form-group
+            label(for="address") Select Address : 
+                a(href="#")#address-refresh-create
+                    span.glyphicon.glyphicon-refresh
+            select.form-control#address-create.bct-form__input.input-lg
+        
+        input(type='text' placeholder='Stream Name' required)#stream-name-create.bct-form__input
+        button(type='submit').bct-form__btn.bct-form__btn_read Add Stream
+    include ./overlay
+

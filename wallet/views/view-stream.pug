@@ -1,0 +1,15 @@
+extends layout-home
+
+block content
+    h1.bct-header View Stream
+    form#view-stream-form.bct-form
+        input(type='text' value=id hidden)#id
+        input(type='text' placeholder='Stream Name' value=stream required)#stream-name.bct-form__input
+        input(type='text' placeholder='Header' value=txid required)#txid.bct-form__input            
+        //- input(type='text' placeholder='Tx Id' required)#txid.bct-form__input
+        br
+        button(type='submit').bct-form__btn.bct-form__btn_read View Stream
+        br
+        div#text-show-div( style="display: none;")
+            textarea(rows="5" readonly).form-control#stream-data-show.bct-form__input
+        a(target="_blank" style="display: none; align:center")#download.btn.btn-info

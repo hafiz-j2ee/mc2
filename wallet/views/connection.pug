@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1.bct-header Make Connection
+    form#make-connection-form.bct-form
+        input(type='text' placeholder='Eamil' required)#email.bct-form__input
+        input(type='text' placeholder='Blockchain address' required)#ip.bct-form__input
+        input(type='text' placeholder='Port' required)#port.bct-form__input
+        input(type='text' placeholder='Name of chain' required)#chain.bct-form__input
+        button(type='submit').bct-form__btn.bct-form__btn_read Submit
+    include ./overlay
+

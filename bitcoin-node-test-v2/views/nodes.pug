@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1.bct-header View Nodes
+    if nodes
+        for node in nodes
+            table.table.table-striped.table-bordered.table-hover.table-condensed
+                tr
+                    th Parameter
+                    th Value
+                for k in Object.keys(node)
+                    tr
+                        td= k
+                        td= node[k]
+            
+            br
+            br
+    else
+        h3 No nodes found
+
+    include ./overlay

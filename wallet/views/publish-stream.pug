@@ -1,0 +1,18 @@
+extends layout-home
+
+block content
+    h1.bct-header Publish Stream
+    form(enctype="multipart/form-data")#publish-stream-form.bct-form
+        input(type='text' value=id hidden)#id
+        input(type='text' placeholder='Stream Name' required)#stream-name.bct-form__input
+        input(type='text' placeholder='Key' )#stream-key.bct-form__input
+
+        span Upload a file
+        input(type="file" name='file')#files.bct-form__input
+
+        span or Input text
+        textarea(rows="5").form-control#stream-data-text.bct-form__input
+
+        button(type='submit').bct-form__btn.bct-form__btn_read Publish Stream
+    include ./overlay
+

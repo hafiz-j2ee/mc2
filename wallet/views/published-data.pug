@@ -1,0 +1,13 @@
+extends layout-home
+
+block content
+    h1.bct-header Published Data List
+
+    table.table.table-striped.table-bordered.table-hover.table-condensed#published-data-table
+        thead
+            tr
+                th Stream Name
+                th Key
+                th Transaction ID (Header)
+                th(colspan='2') Action
+        tbody

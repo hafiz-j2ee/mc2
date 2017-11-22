@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(type='text/javascript' src='/javascripts/index.js')
+  body
+
+  nav.navbar.navbar-inverse
+    div.container-fluid
+      div.navbar-header
+        a(href="/").navbar-brand Wallet
+
+      ul.nav.navbar-nav
+        li
+          a(href="/login") Login
+        li
+          a(href="/registration") Registration
+          
+  block content

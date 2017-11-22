@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1.bct-header Registration
+    form#registration-form.bct-form
+        input(type='text' placeholder='Name' required)#name.bct-form__input
+        input(type='text' placeholder='Eamil' required)#email.bct-form__input
+        input(type='text' placeholder='User Id' required)#user-id.bct-form__input
+        input(type='password' placeholder='Password' required)#password.bct-form__input
+        input(type='text' placeholder='IP' required)#ip.bct-form__input
+        input(type='text' placeholder='Port' required)#port.bct-form__input
+        input(type='text' placeholder='Name of Blockchain' required)#chain.bct-form__input
+        button(type='submit').bct-form__btn.bct-form__btn_read Submit
+    include ./overlay
+

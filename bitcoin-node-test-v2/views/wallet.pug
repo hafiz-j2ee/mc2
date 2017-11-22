@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    h1.bct-header Wallet Request List 
+        a
+            span.glyphicon.glyphicon-refresh#refresh
+
+    table.table.table-striped.table-bordered.table-hover.table-condensed#chain-list-table
+        thead
+            tr
+                th Id
+                th Chain Name
+                th User Name
+                th User Id
+                th Email
+                th Action
+        tbody
+            if rows
+                for row in rows
+                    tr 
+                        td= row["id"]
+                        td= row["chain_name"]
+                        td= row["name"]
+                        td= row["user_id"]
+                        td= row["email"]
+                        td
+                            button(onclick="$(this).grantUser('" + row['id'] + "')") Grant Permission
+  
+    include ./overlay

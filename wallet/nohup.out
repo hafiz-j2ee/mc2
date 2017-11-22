@@ -1,0 +1,130 @@
+
+> bitcoin-node-test@0.0.0 start /home/secl/PycharmProjects/Upwork/wallet
+> node ./bin/www
+
+Table created
+Connected to the multicahin database in multichain db.
+Connected to the multicahin database.
+[0mGET / [32m200 [0m450.489 ms - 887[0m
+[0mGET /stylesheets/style.css [32m200 [0m9.094 ms - 1709[0m
+[0mGET /javascripts/index.js [32m200 [0m10.675 ms - 10937[0m
+undefined
+{}
+[0mPOST /mc/get-chain-list [32m200 [0m29.532 ms - 2[0m
+[0mPOST /mc/get-published-data-list [32m200 [0m4.874 ms - 2[0m
+[0mGET /favicon.ico [33m404 [0m77.442 ms - 1809[0m
+[0mPOST /mc/get-received-data-list [32m200 [0m80.239 ms - 2[0m
+[0mGET / [36m304 [0m108.077 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.886 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m3.492 ms - -[0m
+undefined
+[0mPOST /mc/get-chain-list [32m200 [0m2.539 ms - 2[0m
+[0mPOST /mc/get-published-data-list [32m200 [0m2.359 ms - 2[0m
+{}
+[0mPOST /mc/get-received-data-list [32m200 [0m4.468 ms - 2[0m
+[0mGET / [36m304 [0m150.199 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.379 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.525 ms - -[0m
+undefined
+[0mPOST /mc/get-chain-list [32m200 [0m5.430 ms - 2[0m
+{}
+[0mPOST /mc/get-published-data-list [32m200 [0m2.676 ms - 2[0m
+[0mPOST /mc/get-received-data-list [32m200 [0m1.800 ms - 2[0m
+[0mGET /login [32m200 [0m126.261 ms - 1190[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.994 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.621 ms - -[0m
+undefined
+[0mPOST /mc/get-chain-list [32m200 [0m2.462 ms - 2[0m
+{}
+[0mPOST /mc/get-published-data-list [32m200 [0m3.938 ms - 2[0m
+[0mPOST /mc/get-received-data-list [32m200 [0m2.327 ms - 2[0m
+[0mGET /login [36m304 [0m113.128 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.894 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.786 ms - -[0m
+undefined
+[0mPOST /mc/get-chain-list [32m200 [0m4.278 ms - 2[0m
+[0mPOST /mc/get-published-data-list [32m200 [0m2.343 ms - 2[0m
+{}
+[0mPOST /mc/get-received-data-list [32m200 [0m6.737 ms - 2[0m
+[0mGET / [32m200 [0m125.169 ms - 887[0m
+[0mGET /stylesheets/style.css [32m200 [0m2.022 ms - 1709[0m
+[0mGET /javascripts/index.js [32m200 [0m1.871 ms - 10937[0m
+[0mGET /favicon.ico [33m404 [0m71.579 ms - 1809[0m
+undefined
+{}
+[0mPOST /mc/get-chain-list [32m200 [0m3.973 ms - 2[0m
+[0mPOST /mc/get-published-data-list [32m200 [0m2.429 ms - 2[0m
+[0mPOST /mc/get-received-data-list [32m200 [0m1.914 ms - 2[0m
+
+> bitcoin-node-test@0.0.0 start /home/secl/PycharmProjects/Upwork/wallet
+> node ./bin/www
+
+Table created
+Connected to the multicahin database in multichain db.
+Connected to the multicahin database.
+
+> bitcoin-node-test@0.0.0 start /home/secl/PycharmProjects/Upwork/wallet
+> node ./bin/www
+
+Table created
+Port 4200 is already in use
+
+npm ERR! Linux 4.4.0-98-generic
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "start"
+npm ERR! node v6.11.4
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! bitcoin-node-test@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the bitcoin-node-test@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the bitcoin-node-test package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs bitcoin-node-test
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls bitcoin-node-test
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/secl/PycharmProjects/Upwork/wallet/npm-debug.log
+[0mGET / [32m200 [0m46.660 ms - 887[0m
+[0mGET /stylesheets/style.css [32m200 [0m1.134 ms - 1709[0m
+[0mGET /javascripts/index.js [32m200 [0m0.945 ms - 10937[0m
+undefined
+[0mPOST /mc/get-chain-list [32m200 [0m1.433 ms - 2[0m
+[0mPOST /mc/get-published-data-list [32m200 [0m1.335 ms - 2[0m
+{}
+[0mPOST /mc/get-received-data-list [32m200 [0m2.289 ms - 2[0m
+
+> bitcoin-node-test@0.0.0 start /home/secl/PycharmProjects/Upwork/wallet
+> node ./bin/www
+
+Table created
+Port 4200 is already in use
+
+npm ERR! Linux 4.4.0-98-generic
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "start"
+npm ERR! node v6.11.4
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! bitcoin-node-test@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the bitcoin-node-test@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the bitcoin-node-test package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs bitcoin-node-test
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls bitcoin-node-test
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/secl/PycharmProjects/Upwork/wallet/npm-debug.log
