@@ -28,8 +28,9 @@ $(function () {
     $('#nodes-address').on('blur', getPermissions);
     $('#stream-name-write').on('change', checkWritePermissions);
     $('#login-form').on('submit', login);
+    $('#update-pass-form').on('submit', changePass);
     $('#logout').on('click', logout);
-
+    $("#admin-name").text(localStorage['admin-id']);
 
     function logout(){
         localStorage['admin-id'] = '';
@@ -52,11 +53,35 @@ $(function () {
         })
             .then(function (data) {
                 localStorage['admin-id'] = data.id;
+                $("#admin-name").text(data.id);
+                window.location.href = '/';
+            })
+            .catch(function (err) {
+                alert("User Id or password did not matched");
+                window.location.href = '/login';
+            })
+    }
+
+    function changePass(e) {
+        e.preventDefault();
+        var userId = $('#user-id').val();
+        var oldPassword = $('#old-password').val();
+        var newPassword = $('#new-password').val();
+        var params = { userId: userId, oldPassword: oldPassword, newPassword: newPassword };
+        
+        $.ajax({
+            type: 'POST',
+            url: '/mc/change-pass',
+            data: JSON.stringify(params),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        })
+            .then(function (data) {
+                alert("Password successfully updated");
                 window.location.href = '/';
             })
             .catch(function (err) {
                 alert(data.status);
-                window.location.href = '/login';
             })
     }
 
@@ -85,7 +110,6 @@ $(function () {
                 alert(JSON.stringify(err));
             })
     }
-
 
     function getSubscribeStreams() {
         $.get('/mc/get-all-streams')

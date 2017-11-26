@@ -13,6 +13,11 @@ router.get('/login', function (req, res, next) {
     res.render('login');
 });
 
+/* GET home page. */
+router.get('/change-pass', function (req, res, next) {
+    res.render('changePass');
+});
+
 /* GET create stream page. */
 router.get('/create-stream', function (req, res, next) {
     res.render('create-stream');

@@ -32,7 +32,17 @@ html
           a(href="/stream-details") Stream Details
         li
           a(href="/Wallet") Wallet
-        li
-          a(href="#")#logout Logout
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle(data-toggle="dropdown" href="#")
+            span#admin-name Admin
+            span.caret
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href="/change-pass") Change Password
+            li
+              a.dropdown-item(href="#")#logout Logout
+            
+            
 
   block content

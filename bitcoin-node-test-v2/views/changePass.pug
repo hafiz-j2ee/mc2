@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1.bct-header Update Password
+    form#update-pass-form.bct-form
+        input(type='text' placeholder='User Name' required)#user-id.bct-form__input
+        input(type='password' placeholder='Old Passowrd' required)#old-password.bct-form__input
+        input(type='password' placeholder='New Passowrd' required)#new-password.bct-form__input
+        button(type='submit').bct-form__btn.bct-form__btn_read Update Password
+    include ./overlay
+
+
