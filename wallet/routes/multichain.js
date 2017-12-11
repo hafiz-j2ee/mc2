@@ -32,6 +32,33 @@ router.post('/registration', function (req, res) {
     });
 });
 
+router.post('/change-pass', function (req, res) {
+    let values = [req.body.userId, req.body.oldPassword];
+    let sql = "SELECT id FROM users WHERE id = ? and password = ?";
+
+    db.get(sql, values, (err, row) => {
+        if (err) {
+            console.log(err.message);
+            res.status(500).send(err.toString());
+        } else if (!row){
+            console.log("User ID or Password doesn't matched");
+            res.status(500).send("User ID or Password doesn't matched");
+        } else {
+            console.log('User varified : ' + values[0])
+            let data = [req.body.newPassword, req.body.userId];
+            let sql2 = "UPDATE users SET password = ? WHERE id = ?";
+            
+            db.run(sql2, data, function(err) {
+              if (err) {
+                return console.error(err.message);
+                res.status(500).send("Did not able to update password");
+              }
+              res.json({"status":"ok"});
+            });
+        }   
+    });
+});
+
 router.post('/login', function (req, res) {
     let values = [req.body.userId, req.body.password];
     let sql = "SELECT name, role, id FROM users WHERE id = ? and password = ?";

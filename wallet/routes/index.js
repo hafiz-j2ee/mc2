@@ -8,6 +8,9 @@ router.get('/connection', function (req, res, next) {
     res.render('connection');
 });
 
+router.get('/change-pass', function (req, res, next) {
+    res.render('changePass');
+});
 /* GET create stream page. */
 router.get('/', function (req, res, next) {
     res.render('index');

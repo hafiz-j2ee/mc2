@@ -4,6 +4,10 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script.
+      if(window.location.href.lastIndexOf('login') == -1 && !localStorage['admin-id']){
+        window.location.href = '/login';
+      }
     script(src='https://code.jquery.com/jquery-3.2.1.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
     script(type='text/javascript' src='/javascripts/index.js')
@@ -19,6 +23,8 @@ html
         li
           a(href="/") Home
         li
+          a(href="/transactions") Transactios
+        li
           a(href="/create-stream") Create Stream
         li
           a(href="/publish-stream") Publish Stream
@@ -29,8 +35,6 @@ html
         li
           a(href="/permissions") Permissions
         li
-          a(href="/stream-details") Stream Details
-        li
           a(href="/Wallet") Wallet
       ul.nav.navbar-nav.navbar-right
         li.dropdown
@@ -38,6 +42,9 @@ html
             span#admin-name Admin
             span.caret
           ul.dropdown-menu
+            li
+              a.dropdown-item(href="/registration") Create New Admin
+              hr
             li
               a.dropdown-item(href="/change-pass") Change Password
             li

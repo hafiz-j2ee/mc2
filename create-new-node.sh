@@ -85,6 +85,8 @@ function configure_node_app(){
     #update port
     sed -i -E "s/(.*PORT.*)'[0-9]+'(.*)/\1'${NODE_APP_PORT}'\2/" ./bitcoin-node-test-v2/bin/www
 
+    NETWORK_PORT=`cat ${MULTICHIAN_DIR}/${CHAIN_NAME}/params.dat | grep default-network-port | cut -d " " -f3`
+
     #update bc rpc port
     RPC_PORT=`cat ${MULTICHIAN_DIR}/${CHAIN_NAME}/params.dat | grep default-rpc-port | cut -d " " -f3`
     sed -i -E "s/(.*port: )'[0-9]+'(,.*)/\1'${RPC_PORT}'\2/" ./bitcoin-node-test-v2/routes/multichain.js
@@ -113,7 +115,7 @@ function start_client_app(){
 
 function print_result(){
     IP_ADDRESS=`ip route get 1 | awk '{print $NF;exit}'`
-    output="\nIp Address : ${IP_ADDRESS}\nChain Name : ${CHAIN_NAME}\nrpc port : ${RPC_PORT}\nMax chain size : ${MAX_BLOCK_SIZE}\n"
+    output="\nIp Address : ${IP_ADDRESS}\nChain Name : ${CHAIN_NAME}\nNetwork Port : ${NETWORK_PORT}\nRpc Port : ${RPC_PORT}\nMax chain size : ${MAX_BLOCK_SIZE}\n"
     output="${output}\nAdmin URL : http://${IP_ADDRESS}:${NODE_APP_PORT}\nWallet URL :  http://${IP_ADDRESS}:${WALLET_APP_PORT}\n"
     ps "${output}"
     printf "${output}" > result.txt

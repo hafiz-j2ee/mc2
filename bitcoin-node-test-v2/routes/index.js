@@ -18,6 +18,10 @@ router.get('/change-pass', function (req, res, next) {
     res.render('changePass');
 });
 
+router.get('/registration', function (req, res, next) {
+    res.render('registration');
+});
+
 /* GET create stream page. */
 router.get('/create-stream', function (req, res, next) {
     res.render('create-stream');
@@ -54,8 +58,8 @@ router.get('/view-nodes', function (req, res, next) {
 });
 
 /* GET view streams page. */
-router.get('/stream-details', function (req, res, next) {
-    res.render('stream-details');
+router.get('/transactions', function (req, res, next) {
+    res.render('transactions');
 });
 
 

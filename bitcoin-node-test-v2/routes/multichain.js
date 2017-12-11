@@ -40,6 +40,28 @@ router.post('/login', function (req, res) {
     db.close();
 });
 
+router.post('/registration', function (req, res) {
+    let db = new sqlite3.Database('../wallet/db/multichain.db', (err) => {
+        if (err) {
+            console.error(err.message);
+            res.status(500).send(err.message);
+        } else {
+            console.log('Connected to the multicahin database in multichain db.');
+        }
+    });
+    let values = [req.body.userId, req.body.password, req.body.name, req.body.email];
+    db.run("INSERT INTO admin (id, password, name, email) VALUES (?, ?, ?, ?)", values, function (err) {
+        if (err) {
+            console.log(err.message);
+            res.status(500).send(err.toString());
+        } else {
+            console.log("data inserted : " + JSON.stringify(req.body));
+            res.json({ "status": "New Admin Created" });
+        }
+    });
+    db.close();
+});
+
 router.post('/change-pass', function (req, res) {
     let db = new sqlite3.Database('../wallet/db/multichain.db', (err) => {
         if (err) {

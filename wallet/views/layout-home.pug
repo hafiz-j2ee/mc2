@@ -4,6 +4,10 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script.
+      if(window.location.href.lastIndexOf('login') == -1 && !localStorage['wallet-id']){
+        window.location.href = '/login';
+      }
     script(src='https://code.jquery.com/jquery-3.2.1.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
     script(type='text/javascript' src='/javascripts/index.js')
@@ -22,5 +26,16 @@ html
           a(href="/published-data") Published Data
         li
           a(href="/received-data") Received Data
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle(data-toggle="dropdown" href="#")
+            span#wallet-user-name User (id)
+            span.caret
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href="/change-pass") Change Password
+            li
+              a.dropdown-item(href="#")#logout Logout
+            
           
   block content

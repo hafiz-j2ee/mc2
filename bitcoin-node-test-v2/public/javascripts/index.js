@@ -1,7 +1,6 @@
 $(function () {
-    if(window.location.href.lastIndexOf('login') == -1 && !localStorage['admin-id']){
-        window.location.href = '/login';
-    }
+    // 
+ 
     getNodesAddress();
     getSubscribeStreams();
     getAllStreams();
@@ -31,12 +30,37 @@ $(function () {
     $('#update-pass-form').on('submit', changePass);
     $('#logout').on('click', logout);
     $("#admin-name").text(localStorage['admin-id']);
+    $('#registration-form').on('submit', registration);
+
 
     function logout(){
         localStorage['admin-id'] = '';
         window.location.href = '/login';
     }
 
+    function registration(e) {
+        e.preventDefault();
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var userId = $('#user-id').val();
+        var password = $('#password').val();
+
+        var params = { name: name, email: email, userId: userId, password: password };
+        console.log(params);
+        $.ajax({
+            type: 'POST',
+            url: '/mc/registration',
+            data: JSON.stringify(params),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        })
+            .then(function (data) {
+                alert(data.status);
+            })
+            .catch(function (err) {
+                displayResponse(err, 'ERROR!!!', true);
+            })
+    }
     function login(e) {
         e.preventDefault();
         var userId = $('#user-id').val();

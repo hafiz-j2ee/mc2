@@ -14,6 +14,16 @@ $(function () {
     $('#publish-stream-form').on('submit', publishStream);
     $('#view-stream-form').on('submit', viewStream);
 
+    $('#update-pass-form').on('submit', changePass);
+    $('#logout').on('click', logout);
+    $("#wallet-user-name").text(localStorage['wallet-name']+ ' ('+localStorage['wallet-id']+')');
+
+    function logout(){
+        localStorage['wallet-id'] = '';
+        localStorage['wallet-name'] = '';
+        window.location.href = '/login';
+    }
+
     function registration(e) {
         e.preventDefault();
         var name = $('#name').val();
@@ -42,6 +52,29 @@ $(function () {
             })
     }
 
+    function changePass(e) {
+        e.preventDefault();
+        var userId = $('#user-id').val();
+        var oldPassword = $('#old-password').val();
+        var newPassword = $('#new-password').val();
+        var params = { userId: userId, oldPassword: oldPassword, newPassword: newPassword };
+        
+        $.ajax({
+            type: 'POST',
+            url: '/mc/change-pass',
+            data: JSON.stringify(params),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        })
+            .then(function (data) {
+                alert("Password successfully updated");
+                window.location.href = '/';
+            })
+            .catch(function (err) {
+                alert(data.status);
+            })
+    }
+    
     function login(e) {
         e.preventDefault();
         var userId = $('#user-id').val();
@@ -57,7 +90,8 @@ $(function () {
             dataType: 'json'
         })
             .then(function (data) {
-                localStorage['multichain-id'] = data.id;
+                localStorage['wallet-id'] = data.id;
+                localStorage['wallet-name'] = data.name;
                 window.location.href = '/dashboard';
             })
             .catch(function (err) {

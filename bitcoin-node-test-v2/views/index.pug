@@ -1,15 +1,22 @@
 extends layout
 
 block content
-    h1.bct-header MultiChain Api Test
-    form#write-form.bct-form
-        button(type='submit').bct-form__btn.bct-form__btn_write Write Transaction
-        input(type='text' placeholder='Write Transaction' required)#write-input.bct-form__input
-    form#read-headers-form.bct-form
-        button(type='submit').bct-form__btn.bct-form__btn_headers Read Headers from BC
-        input(type='text' placeholder='Read Headers from BC' required)#read-headers-input.bct-form__input
-    form(name='readForm')#read-form.bct-form
-        button(type='submit').bct-form__btn.bct-form__btn_read Read Transaction
-        input(type='text' placeholder='Read Transaction' required)#read-input.bct-form__input
+    script(type='text/javascript' src='/javascripts/custom.js')
+    h1.bct-header Stream Detalils  
+        a
+            span.glyphicon.glyphicon-refresh#refresh
+
+    input(type='text' placeholder='Search' )#search.bct-form__input
+    table.table.table-striped.table-bordered.table-hover.table-condensed#stream-details-table
+        thead
+            tr
+                th Stream Name
+                th Items Count
+                th Keys(c)
+                th Created Date
+                th Create TxId
+                th Subscribe
+        tbody
     include ./overlay
+
 
