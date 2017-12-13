@@ -40,6 +40,27 @@ router.post('/login', function (req, res) {
     db.close();
 });
 
+router.post('/wallet-users', function (req, res) {
+    let sql = "SELECT id, name, email, \"role\" FROM users";
+
+    new sqlite3.Database('../wallet/db/multichain.db', (err) => {
+        if (err) {
+            console.error(err.message);
+            res.status(500).send(err.message);
+        } else {
+            console.log('Connected to the multicahin database in multichain db.');
+        }
+    }).all(sql, [], (err, row) => {
+        if (err) {
+            console.log(err.message);
+            res.status(500).send(err.toString());
+        } else {
+            console.log('Successfully data fetched from DB : '+ JSON.stringify(row))
+            res.json(row);
+        }   
+    }).close();
+});
+
 router.post('/registration', function (req, res) {
     let db = new sqlite3.Database('../wallet/db/multichain.db', (err) => {
         if (err) {

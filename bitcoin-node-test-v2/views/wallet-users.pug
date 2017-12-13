@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    script(type='text/javascript' src='/javascripts/wallet-users.js')
+    h1.bct-header Wallet Users
+
+    input(type='text' placeholder='Search')#search-wallet-users.bct-form__input
+    table.table.table-striped.table-bordered.table-hover.table-condensed#wallet-users-table
+        thead
+            tr
+                th User Id
+                th User Name
+                th Email
+                th Role
+        tbody
+    include ./overlay
+
+

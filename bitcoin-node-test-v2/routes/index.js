@@ -5,53 +5,57 @@ const sqlite3 = require('sqlite3').verbose();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Enfusion'});
+    res.render('stream-details', {title: 'Enfusion'});
+});
+
+router.get('/wallet-users', function (req, res, next) {
+    res.render('wallet-users', {title: 'Enfusion'});
 });
 
 /* GET home page. */
 router.get('/login', function (req, res, next) {
-    res.render('login');
+    res.render('login', {title: 'Enfusion'});
 });
 
 /* GET home page. */
 router.get('/change-pass', function (req, res, next) {
-    res.render('changePass');
+    res.render('changePass', {title: 'Enfusion'});
 });
 
 router.get('/registration', function (req, res, next) {
-    res.render('registration');
+    res.render('registration', {title: 'Enfusion'});
 });
 
 /* GET create stream page. */
 router.get('/create-stream', function (req, res, next) {
-    res.render('create-stream');
+    res.render('create-stream', {title: 'Enfusion'});
 });
 
 /* GET publish stream page. */
 router.get('/publish-stream', function (req, res, next) {
-    res.render('publish-stream');
+    res.render('publish-stream', {title: 'Enfusion'});
 });
 
 /* GET view stream page. */
 router.get('/view-stream', function (req, res, next) {
-    res.render('view-stream');
+    res.render('view-stream', {title: 'Enfusion'});
 });
 
 router.get('/permissions', function (req, res, next) {
-    res.render('permissions');
+    res.render('permissions', {title: 'Enfusion'});
 });
 
 /* GET view nodes page. */
 router.get('/view-nodes', function (req, res, next) {
     request("http://localhost:3000/mc/get-nodes", function (err, response, body) {
         if (err) {
-            res.render('nodes');
+            res.render('nodes', {title: 'Enfusion'});
         } else {
             body = JSON.parse(body);
             if (body.length > 0){
-                 res.render('nodes', { nodes: body });
+                 res.render('nodes', { nodes: body, title: 'Enfusion'});
             } else {
-                res.render('nodes');
+                res.render('nodes', {title: 'Enfusion'});
             }
         }
     })
