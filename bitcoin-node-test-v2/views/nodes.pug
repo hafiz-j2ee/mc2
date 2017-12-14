@@ -3,18 +3,19 @@ extends layout
 block content
     h1.bct-header View Nodes
     if nodes
-        for node in nodes
-            table.table.table-striped.table-bordered.table-hover.table-condensed
-                tr
-                    th Parameter
-                    th Value
-                for k in Object.keys(node)
-                    tr
-                        td= k
-                        td= node[k]
-            
-            br
-            br
+        div.panel-group#accordion
+            for node in nodes
+                 div.panel.panel-default
+                    div.panel-heading
+                        h2.panel-title
+                            a(data-toggle="collapse" data-parent="#accordion" href= "#"+node['id'])= node['addr']
+                    div.panel-collapse.collapse(id= node['id'])
+                        div.panel-body 
+                            table.table.table-striped.table-bordered.table-hover.table-condensed
+                                for k in Object.keys(node)
+                                    tr
+                                        td= k
+                                        td= node[k]
     else
         h3 No nodes found
 

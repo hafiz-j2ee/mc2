@@ -6,9 +6,9 @@ const sqlite3 = require('sqlite3').verbose();
 //chain-name : 
 var client = new bitcoinClient.Client({
     host: 'localhost',
-    port: '4788',
+    port: '4344',
     user: 'multichainrpc',
-    pass: 'HoX2QGpEPz8L7LUeNs1PX6CTgGttZgsMuMtvfe6LSFSp',
+    pass: 'FNRjt9FfNSddde5rBmPFvWDzc62X22c7FLsFFVkek5w3',
     timeout: 10000
 });
 

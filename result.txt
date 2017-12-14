@@ -1,0 +1,9 @@
+
+Ip Address : 192.168.0.109
+Chain Name : sbzchain
+Network Port : 4345
+Rpc Port : 4344
+Max chain size : 
+
+Admin URL : http://192.168.0.109:3000
+Wallet URL :  http://192.168.0.109:4200

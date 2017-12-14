@@ -128,3 +128,10 @@ npm ERR! There is likely additional logging output above.
 
 npm ERR! Please include the following file with any support request:
 npm ERR!     /home/secl/PycharmProjects/Upwork/wallet/npm-debug.log
+
+> bitcoin-node-test@0.0.0 start /home/secl/PycharmProjects/Upwork/mc2/wallet
+> node ./bin/www
+
+Table created
+Connected to the multicahin database in multichain db.
+Connected to the multicahin database.
