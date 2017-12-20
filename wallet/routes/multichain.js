@@ -79,7 +79,6 @@ router.post('/login', function (req, res) {
 
 router.post('/get-chain-list', function (req, res) {
     let sql = "select * from chaininfo where user_id = ?";
-    console.log(req.body.id);
     db.all(sql, [req.body.id], (err, row) => {
         if (err) {
             console.log(err);
@@ -108,7 +107,6 @@ router.post('/get-published-data-list', function (req, res) {
 
 router.post('/get-received-data-list', function (req, res) {
     let sql = "select * from received_data where receiver_id = ?";
-    console.log(req.body);
     db.all(sql, [req.body.id], (err, row) => {
         if (err) {
             console.log(err);
@@ -162,7 +160,7 @@ router.post('/publish-stream', function (req, res) {
                             console.log("data publisdhed data inserted ");
                         }
                     });
-                    res.json(response.getBody());
+                    res.json({"txid":response.getBody()});
                 }); 
         }   
     });

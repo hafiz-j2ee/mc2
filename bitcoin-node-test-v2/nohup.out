@@ -29,3 +29,208 @@ Connected to the multicahin database.
 [0mGET /mc/get-nodes-addresses [36m304 [0m1.484 ms - -[0m
 [0mGET /mc/get-all-streams [36m304 [0m3.684 ms - -[0m
 [0mGET /mc/get-all-streams [36m304 [0m2.084 ms - -[0m
+
+> bitcoin-node-test@0.0.0 start /home/secl/PycharmProjects/Upwork/mc2/bitcoin-node-test-v2
+> node ./bin/www
+
+Table created
+Connected to the multicahin database.
+[0mGET / [32m200 [0m440.862 ms - 2422[0m
+[0mGET /javascripts/index.js [32m200 [0m5.100 ms - 22430[0m
+[0mGET /stylesheets/style.css [32m200 [0m9.178 ms - 1709[0m
+[0mGET /javascripts/custom.js [32m200 [0m2.595 ms - 1722[0m
+[0mGET /images/logo.jpg [32m200 [0m1.473 ms - 29973[0m
+[0mGET /favicon.ico [33m404 [0m60.745 ms - 3026[0m
+[0mGET /mc/get-nodes-addresses [32m200 [0m92.953 ms - 42[0m
+[0mGET /mc/get-all-streams [32m200 [0m86.900 ms - 463[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.878 ms - -[0m
+[0mPOST /mc/stream-details [32m200 [0m91.272 ms - 524[0m
+[0mGET / [36m304 [0m132.905 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.635 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.306 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m1.404 ms - -[0m
+[0mGET /javascripts/custom.js [36m304 [0m1.498 ms - -[0m
+[0mGET /wallet-users [32m200 [0m116.545 ms - 2311[0m
+[0mGET /javascripts/index.js [36m304 [0m0.422 ms - -[0m
+[0mGET /javascripts/wallet-users.js [32m200 [0m2.025 ms - 1470[0m
+[0mGET /images/logo.jpg [36m304 [0m2.343 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m2.153 ms - -[0m
+Connected to the multicahin database in multichain db.
+[0mGET /mc/get-all-streams [36m304 [0m7.726 ms - -[0m
+Successfully data fetched from DB : [{"id":"hafiz","name":"Hafiz","email":"hafiz.j2ee@gmail.com","role":"user"},{"id":"rahman","name":"Rahman","email":"rahman@gmail.com","role":"user"},{"id":"sbz","name":"Hafizur Rahman","email":"hafiz.j2ee@gmail.com","role":"user"},{"id":"md","name":"Rahman","email":"rahman@gmail.com","role":"user"},{"id":"hafiz1","name":"Haifzur","email":"hafiz.j2ee@gmail.com","role":"user"}]
+[0mPOST /mc/wallet-users [32m200 [0m8.008 ms - 378[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.936 ms - -[0m
+[ { id: 1,
+    user_id: 'hafiz1',
+    chain_name: 'chain1',
+    name: 'Haifzur',
+    email: 'hafiz.j2ee@gmail.com' } ]
+[0mGET /Wallet [32m200 [0m131.641 ms - 2416[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.339 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.515 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.322 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m3.924 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m7.750 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.469 ms - -[0m
+[0mPOST /mc/grant-user [32m200 [0m28.676 ms - 40[0m
+data updated for id : 1
+[]
+[0mGET /wallet [32m200 [0m108.707 ms - 2246[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.622 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.694 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.471 ms - -[0m
+[0mGET /mc/get-nodes-addresses [32m200 [0m3.474 ms - 83[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.555 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.605 ms - -[0m
+[]
+[0mGET /Wallet [32m200 [0m111.685 ms - 2246[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.584 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.282 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.889 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m3.337 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m4.952 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m1.828 ms - -[0m
+[]
+[0mGET /Wallet [36m304 [0m111.479 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.660 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.604 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.413 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m4.907 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m5.896 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.789 ms - -[0m
+[0mGET /wallet-users [36m304 [0m67.773 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.425 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.392 ms - -[0m
+[0mGET /javascripts/wallet-users.js [36m304 [0m0.927 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m1.806 ms - -[0m
+Connected to the multicahin database in multichain db.
+Successfully data fetched from DB : [{"id":"hafiz","name":"Hafiz","email":"hafiz.j2ee@gmail.com","role":"user"},{"id":"rahman","name":"Rahman","email":"rahman@gmail.com","role":"user"},{"id":"sbz","name":"Hafizur Rahman","email":"hafiz.j2ee@gmail.com","role":"user"},{"id":"md","name":"Rahman","email":"rahman@gmail.com","role":"user"},{"id":"hafiz1","name":"Haifzur","email":"hafiz.j2ee@gmail.com","role":"user"}]
+[0mPOST /mc/wallet-users [32m200 [0m5.466 ms - 378[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m4.809 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.330 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.146 ms - -[0m
+[0mGET / [36m304 [0m96.097 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.368 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m2.427 ms - -[0m
+[0mGET /javascripts/custom.js [36m304 [0m0.518 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.535 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m9.374 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m8.639 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m5.503 ms - -[0m
+[0mPOST /mc/stream-details [32m200 [0m14.444 ms - 524[0m
+[0mGET /permissions [32m200 [0m97.006 ms - 4511[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.739 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.863 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.780 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m2.084 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.407 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.928 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.873 ms - -[0m
+[0mGET /publish-stream [32m200 [0m111.885 ms - 2933[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.877 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.346 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.363 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m2.910 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m5.026 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.787 ms - -[0m
+[0mGET /create-stream [32m200 [0m132.782 ms - 2428[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.468 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.349 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.475 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m4.782 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m5.097 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.901 ms - -[0m
+[0mGET /transactions [32m200 [0m106.097 ms - 2673[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.010 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.141 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.342 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m4.563 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m4.527 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.672 ms - -[0m
+[0mGET /create-stream [36m304 [0m84.564 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.665 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.717 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.388 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m3.113 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m13.569 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.127 ms - -[0m
+[0mGET /view-stream [32m200 [0m76.811 ms - 3082[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.679 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.765 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.400 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m2.303 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m8.716 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.090 ms - -[0m
+[0mGET /mc/get-nodes [32m200 [0m3.379 ms - 2[0m
+[0mGET /view-nodes [32m200 [0m118.522 ms - 1958[0m
+[0mGET /stylesheets/style.css [36m304 [0m4.451 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.486 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.496 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m3.033 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.838 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.562 ms - -[0m
+[0mGET /permissions [36m304 [0m139.892 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.811 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.034 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.483 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m4.805 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m5.420 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.241 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m5.097 ms - -[0m
+[0mGET /transactions [36m304 [0m88.738 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.348 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.388 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.415 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m1.842 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m6.382 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.420 ms - -[0m
+[0mGET /create-stream [36m304 [0m83.045 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.345 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.345 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m2.067 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m2.445 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.694 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.488 ms - -[0m
+[0mPOST /mc/create-stream [32m200 [0m8.340 ms - 81[0m
+[0mPOST /mc/subscribe [32m200 [0m17.979 ms - 4[0m
+[0mGET /create-stream [36m304 [0m65.744 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.508 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.791 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.868 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m3.065 ms - -[0m
+[0mGET /mc/get-all-streams [32m200 [0m4.420 ms - 690[0m
+[0mGET /mc/get-all-streams [36m304 [0m4.080 ms - -[0m
+[0mGET /publish-stream [36m304 [0m71.566 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.694 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m0.772 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m1.352 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m3.225 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m3.924 ms - -[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.861 ms - -[0m
+[0mPOST /mc/get-txid [32m200 [0m9.134 ms - 2[0m
+[0mPOST /mc/publish-stream [32m200 [0m3.330 ms - 66[0m
+[0mGET /publish-stream [36m304 [0m96.102 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.677 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.242 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m3.679 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m3.446 ms - -[0m
+[0mGET /mc/get-all-streams [32m200 [0m4.172 ms - 700[0m
+[0mGET /mc/get-all-streams [36m304 [0m2.497 ms - -[0m
+[0mPOST /mc/get-txid [32m200 [0m5.685 ms - 68[0m
+{ Error: Stream with this name not found: Stream1
+    at /home/secl/PycharmProjects/Upwork/mc2/bitcoin-node-test-v2/node_modules/bitcoin/lib/jsonrpc.js:130:19
+    at Array.forEach (<anonymous>)
+    at IncomingMessage.<anonymous> (/home/secl/PycharmProjects/Upwork/mc2/bitcoin-node-test-v2/node_modules/bitcoin/lib/jsonrpc.js:127:15)
+    at IncomingMessage.emit (events.js:164:20)
+    at endReadableNT (_stream_readable.js:1054:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9) code: -708 }
+[0mPOST /mc/publish-stream [31m500 [0m12.695 ms - 47[0m
+[0mPOST /mc/publish-stream [32m200 [0m2.153 ms - 66[0m
+[0mPOST /mc/view-stream [32m200 [0m3.274 ms - 203[0m
+[0mGET /login [32m200 [0m30.962 ms - 794[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.027 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.559 ms - -[0m
+[0mGET /mc/get-nodes-addresses [36m304 [0m2.729 ms - -[0m
+[0mGET /mc/get-all-streams [32m200 [0m4.027 ms - 700[0m
+[0mGET /mc/get-all-streams [36m304 [0m4.352 ms - -[0m

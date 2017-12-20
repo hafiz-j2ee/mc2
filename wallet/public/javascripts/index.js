@@ -155,7 +155,7 @@ $(function () {
                     dataType: 'json'
                 })
                     .then(function (data) {
-                        alert('Stream Published. TX ID : '+ data);
+                        alert('Stream Published. TX ID : '+ data.txid);
                     })
                     .catch(function (err) {
                         alert('ERROR!!! ' + JSON.stringify(err));
@@ -176,7 +176,7 @@ $(function () {
                     alert('Stream Published');
                 })
                 .catch(function (err) {
-                    alert('ERROR!!! ' + err);
+                    alert('ERROR!!! ' + JSON.stringify(err));
                 })
         }
     }
@@ -227,7 +227,7 @@ $(function () {
             $.ajax({
                 type: 'POST',
                 url: '/mc/get-chain-list',
-                data: JSON.stringify({id : localStorage['multichain-id'] }),
+                data: JSON.stringify({id : localStorage['wallet-id'] }),
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json'
             })
@@ -254,7 +254,7 @@ $(function () {
             $.ajax({
                 type: 'POST',
                 url: '/mc/get-published-data-list',
-                data: JSON.stringify({id : localStorage['multichain-id'] }),
+                data: JSON.stringify({id : localStorage['wallet-id'] }),
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json'
             })
@@ -282,7 +282,7 @@ $(function () {
             $.ajax({
                 type: 'POST',
                 url: '/mc/get-received-data-list',
-                data: JSON.stringify({id : localStorage['multichain-id'] }),
+                data: JSON.stringify({id : localStorage['wallet-id'] }),
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json'
             })
