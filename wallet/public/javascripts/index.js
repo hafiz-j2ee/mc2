@@ -231,6 +231,14 @@ $(function () {
                     download.text("Download");
                     download.show();
                     $('#text-show-div').hide()
+                } else if (data.data.indexOf('<,,>') != -1){
+                    var d=data.data.split('<,,>');
+                    var encodedUri = encodeURI(d[1]);
+                    download.attr('href', encodedUri);
+                    download.attr("download", d[0]);
+                    download.text("Download");
+                    download.show();
+                    $('#text-show-div').hide()
                 } else {
                     console.log(data);
                     download.hide();
