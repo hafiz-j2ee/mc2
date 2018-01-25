@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1.bct-header Login
+    form#login-private-key-form.bct-form
+        input(type='text' placeholder='Enter Your Private Key' required)#private-key.bct-form__input
+        button(type='submit').bct-form__btn.bct-form__btn_read Login
+
+    h4
+        a(href="/login") Login
+    include ./overlay
+

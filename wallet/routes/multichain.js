@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const sqlite3 = require('sqlite3').verbose();
 var requestify = require('requestify'); 
+var crypto = require('crypto');
 
 let db = new sqlite3.Database('./db/multichain.db', (err) => {
     if (err) {
@@ -13,19 +14,31 @@ let db = new sqlite3.Database('./db/multichain.db', (err) => {
 
 router.post('/registration', function (req, res) {
     let values = [req.body.userId, req.body.name, req.body.email, req.body.password, "user"];
-    db.run("INSERT INTO users (id, name, email, password, role ) VALUES (?, ?, ?, ?, ?)", values, function (err) {
+    var hash = crypto.createHash('md5').update(values[0]+values[1]+values[2]+values[3]+values[4]).digest('hex');
+    console.log(hash);
+    console.log(-2);
+    values[5] = hash;
+    
+    console.log(-1);
+    db.run("INSERT INTO users (id, name, email, password, role, privatekey ) VALUES (?, ?, ?, ?, ?, ?)", values, function (err) {
+        
+        console.log(0);
         if (err) {
+            console.log(1);
             console.log(err.message);
             res.status(500).send(err.toString());
         } else {
             let chainValues = [req.body.userId, req.body.ip, req.body.port, req.body.chain]
+            console.log(2);
             db.run("INSERT INTO chaininfo (user_id, ip, port, chain_name, grant) VALUES (?, ?, ?, ?, 'N')", chainValues, function (err) {
                 if (err) {
+                    console.log(3);
                     console.log(err.message);
                     res.status(500).send(err.toString());
                 } else {
+                    console.log(4);
                     console.log("data inserted : " + JSON.stringify(req.body));
-                    res.json({ "status": "Registration complete" });
+                    res.json({ "status": "Registration complete", "privateKey":hash });
                 }
             });
         }
@@ -62,7 +75,6 @@ router.post('/change-pass', function (req, res) {
 router.post('/login', function (req, res) {
     let values = [req.body.userId, req.body.password];
     let sql = "SELECT name, role, id FROM users WHERE id = ? and password = ?";
-
     db.get(sql, values, (err, row) => {
         if (err) {
             console.log(err.message);
@@ -70,6 +82,23 @@ router.post('/login', function (req, res) {
         } else if (!row){
             console.log("User ID or Password doesn't matched");
             res.status(500).send("User ID or Password doesn't matched");
+        } else {
+            console.log('User varified : ' + values[0])
+            res.json(row);
+        }   
+    });
+});
+
+router.post('/authenticate', function (req, res) {
+    let values = [req.body.privateKey];
+    let sql = "SELECT name, role, id FROM users WHERE privatekey = ?";
+    db.get(sql, values, (err, row) => {
+        if (err) {
+            console.log(err.message);
+            res.status(500).send(err.toString());
+        } else if (!row){
+            console.log("Private key not found");
+            res.status(500).send("Authentication error : Private key not found");
         } else {
             console.log('User varified : ' + values[0])
             res.json(row);

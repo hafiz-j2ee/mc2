@@ -24,6 +24,10 @@ router.get('/login', function (req, res, next) {
     res.render('login');
 });
 
+router.get('/authenticate', function (req, res, next) {
+    res.render('login-private-key');
+});
+
 router.get('/dashboard', function (req, res, next) {
      res.render('dashboard');
 });

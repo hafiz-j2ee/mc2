@@ -1,6 +1,10 @@
 extends layout
 
 block content
+    <div class="alert alert-success alert-dismissable" hidden id="alert-suc">
+        <a href="/login" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Registration Complete.</strong> Private Key : <spna id="private-key-show"></span>
+    </div>
     h1.bct-header Registration
     form#registration-form.bct-form
         input(type='text' placeholder='Name' required)#name.bct-form__input

@@ -11,6 +11,7 @@ $(function () {
     $('#create-stream-form').on('submit', createStream);
     $('#registration-form').on('submit', registration);
     $('#login-form').on('submit', login);
+    $('#login-private-key-form').on('submit', authenticate);
     $('#publish-stream-form').on('submit', publishStream);
     $('#view-stream-form').on('submit', viewStream);
 
@@ -44,10 +45,13 @@ $(function () {
             dataType: 'json'
         })
             .then(function (data) {
-                alert(data.status);
-                window.location.href = '/login';
+                // alert(data.status+"\nPrivate Key : "+data.privateKey);
+                $('#private-key-show').text(data.privateKey);
+                $('#alert-suc').show();
+                // window.location.href = '/login';
             })
             .catch(function (err) {
+                console.log(err);
                 displayResponse(err, 'ERROR!!!', true);
             })
     }
@@ -85,6 +89,29 @@ $(function () {
         $.ajax({
             type: 'POST',
             url: '/mc/login',
+            data: JSON.stringify(params),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json'
+        })
+            .then(function (data) {
+                localStorage['wallet-id'] = data.id;
+                localStorage['wallet-name'] = data.name;
+                window.location.href = '/dashboard';
+            })
+            .catch(function (err) {
+                alert(data.status);
+                window.location.href = '/login';
+            })
+    }
+    
+    function authenticate(e) {
+        e.preventDefault();
+        var privateKey = $('#private-key').val();
+        var params = { privateKey: privateKey };
+
+        $.ajax({
+            type: 'POST',
+            url: '/mc/authenticate',
             data: JSON.stringify(params),
             contentType: 'application/json; charset=utf-8',
             dataType: 'json'
